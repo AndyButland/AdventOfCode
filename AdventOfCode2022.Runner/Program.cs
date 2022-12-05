@@ -16,6 +16,10 @@ while (input != "0")
     Console.WriteLine("> '2b' - Day 2 (Rock Paper Scissors), Part 2");
     Console.WriteLine("> '3a' - Day 3 (Rucksack Reorganization), Part 1");
     Console.WriteLine("> '3b' - Day 3 (Rucksack Reorganization), Part 2");
+    Console.WriteLine("> '4a' - Day 4 (Camp Cleanup), Part 1");
+    Console.WriteLine("> '4b' - Day 4 (Camp Cleanup), Part 2");
+    Console.WriteLine("> '5a' - Day 5 (Supply Stacks), Part 1");
+    Console.WriteLine("> '5b' - Day 5 (Supply Stacks), Part 2");
     Console.WriteLine();
     Console.WriteLine("Enter '0' to exit.");
 
@@ -58,6 +62,30 @@ while (input != "0")
         case "3b":
             {
                 var result = Day3.GetTotalPriortiesOfBadgeItems(GetInputData(3));
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "4a":
+            {
+                var result = Day4.GetNumberOfContainingRanges(GetInputData(4), Day4.ContainCheck.FullyContains);
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "4b":
+            {
+                var result = Day4.GetNumberOfContainingRanges(GetInputData(4), Day4.ContainCheck.Overlaps);
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "5a":
+            {
+                var result = Day5.GetTopCratesFromStacks(GetInputData(5), Day5.MoveBehaviour.SingleItem);
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "5b":
+            {
+                var result = Day5.GetTopCratesFromStacks(GetInputData(5), Day5.MoveBehaviour.MultipleItems);
                 Console.WriteLine($"Result: {result}");
             }
             break;
