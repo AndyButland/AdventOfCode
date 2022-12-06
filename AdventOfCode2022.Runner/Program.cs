@@ -20,6 +20,9 @@ while (input != "0")
     Console.WriteLine("> '4b' - Day 4 (Camp Cleanup), Part 2");
     Console.WriteLine("> '5a' - Day 5 (Supply Stacks), Part 1");
     Console.WriteLine("> '5b' - Day 5 (Supply Stacks), Part 2");
+    Console.WriteLine("> '6a' - Day 5 (Tuning Trouble), Part 1");
+    Console.WriteLine("> '6b' - Day 5 (Tuning Trouble), Part 2");
+    Console.WriteLine();
     Console.WriteLine();
     Console.WriteLine("Enter '0' to exit.");
 
@@ -31,61 +34,73 @@ while (input != "0")
             break;
         case "1a":
             {
-                var result = Day1.GetMaxCaloriesCarriedByAnElf(GetInputData(1));
+                var result = Day1.GetMaxCaloriesCarriedByAnElf(GetInputDataLines(1));
                 Console.WriteLine($"Result: {result}");
             }
             break;
         case "1b":
             {
-                var result = Day1.GetCaloriesCarriedByTopElves(GetInputData(1), 3);
+                var result = Day1.GetCaloriesCarriedByTopElves(GetInputDataLines(1), 3);
                 Console.WriteLine($"Result: {result}");
             }
             break;
         case "2a":
             {
-                var result = Day2.GetRockPaperScissorScoreWithStrategy1(GetInputData(2));
+                var result = Day2.GetRockPaperScissorScoreWithStrategy1(GetInputDataLines(2));
                 Console.WriteLine($"Result: {result}");
             }
             break;
         case "2b":
             {
-                var result = Day2.GetRockPaperScissorScoreWithStrategy2(GetInputData(2));
+                var result = Day2.GetRockPaperScissorScoreWithStrategy2(GetInputDataLines(2));
                 Console.WriteLine($"Result: {result}");
             }
             break;
         case "3a":
             {
-                var result = Day3.GetTotalPriortiesOfDuplicatedItems(GetInputData(3));
+                var result = Day3.GetTotalPriortiesOfDuplicatedItems(GetInputDataLines(3));
                 Console.WriteLine($"Result: {result}");
             }
             break;
         case "3b":
             {
-                var result = Day3.GetTotalPriortiesOfBadgeItems(GetInputData(3));
+                var result = Day3.GetTotalPriortiesOfBadgeItems(GetInputDataLines(3));
                 Console.WriteLine($"Result: {result}");
             }
             break;
         case "4a":
             {
-                var result = Day4.GetNumberOfContainingRanges(GetInputData(4), Day4.ContainCheck.FullyContains);
+                var result = Day4.GetNumberOfContainingRanges(GetInputDataLines(4), Day4.ContainCheck.FullyContains);
                 Console.WriteLine($"Result: {result}");
             }
             break;
         case "4b":
             {
-                var result = Day4.GetNumberOfContainingRanges(GetInputData(4), Day4.ContainCheck.Overlaps);
+                var result = Day4.GetNumberOfContainingRanges(GetInputDataLines(4), Day4.ContainCheck.Overlaps);
                 Console.WriteLine($"Result: {result}");
             }
             break;
         case "5a":
             {
-                var result = Day5.GetTopCratesFromStacks(GetInputData(5), Day5.MoveBehaviour.SingleItem);
+                var result = Day5.GetTopCratesFromStacks(GetInputDataLines(5), Day5.MoveBehaviour.SingleItem);
                 Console.WriteLine($"Result: {result}");
             }
             break;
         case "5b":
             {
-                var result = Day5.GetTopCratesFromStacks(GetInputData(5), Day5.MoveBehaviour.MultipleItems);
+                var result = Day5.GetTopCratesFromStacks(GetInputDataLines(5), Day5.MoveBehaviour.MultipleItems);
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "6a":
+            {
+                var result = Day6.GetPositionOfMarker(GetInputData(6), 4);
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "6b":
+            {
+                var result = Day6.GetPositionOfMarker(GetInputData(6), 14);
                 Console.WriteLine($"Result: {result}");
             }
             break;
@@ -97,7 +112,7 @@ while (input != "0")
     Console.WriteLine();
 }
 
-static string[] GetInputData(int day)
+static string GetInputData(int day)
 {
     var assembly = Assembly.GetExecutingAssembly();
     var resourceName = $"AdventOfCode2022.Runner.InputData.Day{day}.txt";
@@ -111,8 +126,9 @@ static string[] GetInputData(int day)
 
         using (StreamReader reader = new StreamReader(stream))
         {
-            string inputData = reader.ReadToEnd();
-            return inputData.Split(Environment.NewLine);
+            return reader.ReadToEnd();
         }
     }
 }
+
+static string[] GetInputDataLines(int day) => GetInputData(day).Split(Environment.NewLine);
