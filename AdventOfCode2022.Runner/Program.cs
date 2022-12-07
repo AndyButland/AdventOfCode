@@ -20,8 +20,10 @@ while (input != "0")
     Console.WriteLine("> '4b' - Day 4 (Camp Cleanup), Part 2");
     Console.WriteLine("> '5a' - Day 5 (Supply Stacks), Part 1");
     Console.WriteLine("> '5b' - Day 5 (Supply Stacks), Part 2");
-    Console.WriteLine("> '6a' - Day 5 (Tuning Trouble), Part 1");
-    Console.WriteLine("> '6b' - Day 5 (Tuning Trouble), Part 2");
+    Console.WriteLine("> '6a' - Day 6 (Tuning Trouble), Part 1");
+    Console.WriteLine("> '6b' - Day 6 (Tuning Trouble), Part 2");
+    Console.WriteLine("> '7a' - Day 7 (No Space Left On Device), Part 1");
+    Console.WriteLine("> '7b' - Day 7 (No Space Left On Device), Part 2");
     Console.WriteLine();
     Console.WriteLine();
     Console.WriteLine("Enter '0' to exit.");
@@ -101,6 +103,18 @@ while (input != "0")
         case "6b":
             {
                 var result = Day6.GetPositionOfMarker(GetInputData(6), 14);
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "7a":
+            {
+                var result = Day7.GetTotalDirectorySize(GetInputDataLines(7), 100000);
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "7b":
+            {
+                var result = Day7.GetSizeOfDirectoryToDelete(GetInputDataLines(7), 8381165);
                 Console.WriteLine($"Result: {result}");
             }
             break;
