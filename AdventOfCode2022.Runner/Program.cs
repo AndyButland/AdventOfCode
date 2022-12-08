@@ -24,6 +24,8 @@ while (input != "0")
     Console.WriteLine("> '6b' - Day 6 (Tuning Trouble), Part 2");
     Console.WriteLine("> '7a' - Day 7 (No Space Left On Device), Part 1");
     Console.WriteLine("> '7b' - Day 7 (No Space Left On Device), Part 2");
+    Console.WriteLine("> '8a' - Day 8 (Treetop Tree House), Part 1");
+    Console.WriteLine("> '8b' - Day 8 (Treetop Tree House), Part 2");
     Console.WriteLine();
     Console.WriteLine();
     Console.WriteLine("Enter '0' to exit.");
@@ -115,6 +117,18 @@ while (input != "0")
         case "7b":
             {
                 var result = Day7.GetSizeOfDirectoryToDelete(GetInputDataLines(7), 8381165);
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "8a":
+            {
+                var result = Day8.GetNumberOfVisibleTrees(GetInputDataLines(8));
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "8b":
+            {
+                var result = Day8.GetHighestScenicScore(GetInputDataLines(8));
                 Console.WriteLine($"Result: {result}");
             }
             break;
