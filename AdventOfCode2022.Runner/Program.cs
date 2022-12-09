@@ -26,6 +26,9 @@ while (input != "0")
     Console.WriteLine("> '7b' - Day 7 (No Space Left On Device), Part 2");
     Console.WriteLine("> '8a' - Day 8 (Treetop Tree House), Part 1");
     Console.WriteLine("> '8b' - Day 8 (Treetop Tree House), Part 2");
+    Console.WriteLine("> '9a' - Day 9 (Rope Bridge), Part 1");
+    Console.WriteLine("> '9b' - Day 9 (Rope Bridge), Part 2");
+    Console.WriteLine();
     Console.WriteLine();
     Console.WriteLine();
     Console.WriteLine("Enter '0' to exit.");
@@ -129,6 +132,18 @@ while (input != "0")
         case "8b":
             {
                 var result = Day8.GetHighestScenicScore(GetInputDataLines(8));
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "9a":
+            {
+                var result = Day9.GetNumberOfTailPositions(GetInputDataLines(9), 2);
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "9b":
+            {
+                var result = Day9.GetNumberOfTailPositions(GetInputDataLines(9), 9);
                 Console.WriteLine($"Result: {result}");
             }
             break;
