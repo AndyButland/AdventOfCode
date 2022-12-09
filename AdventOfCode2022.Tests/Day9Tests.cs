@@ -37,7 +37,7 @@ U 20";
         {
             string[] inputLines = GetInputLines(s_input1);
 
-            var result = Day9.GetNumberOfTailPositions(inputLines, 9);
+            var result = Day9.GetNumberOfTailPositions(inputLines, 10);
             result.Should().Be(1);
         }
 
@@ -46,7 +46,7 @@ U 20";
         {
             string[] inputLines = GetInputLines(s_input2);
 
-            var result = Day9.GetNumberOfTailPositions(inputLines, 9);
+            var result = Day9.GetNumberOfTailPositions(inputLines, 10);
             result.Should().Be(36);
         }
 

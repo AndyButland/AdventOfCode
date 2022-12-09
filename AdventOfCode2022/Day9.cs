@@ -1,4 +1,5 @@
-﻿using static AdventOfCode2022.Day9;
+﻿using System.Text;
+using static AdventOfCode2022.Day9;
 
 namespace AdventOfCode2022
 {
@@ -50,160 +51,139 @@ namespace AdventOfCode2022
             {
                 for (int i = 0; i < movement.Steps; i++)
                 {
-                    MovePositions(movement.Direction, ref headPosition, tailPositions);
+                    headPosition = MoveHeadPosition(movement.Direction, headPosition, tailPositions);
                     visitedPositions.Add(tailPositions.Last());
                 }
+
+                // For debug:
+                // var display = GetRopeDisplay(headPosition, tailPositions);
             }
 
             return visitedPositions.Count;
         }
 
-        private static void MovePositions(
+        private static (int X, int Y) MoveHeadPosition(
             char direction,
-            ref (int X, int Y) headPosition,
+            (int X, int Y) headPosition,
             List<(int X, int Y)> tailPositions)
         {
             switch (direction)
             {
                 case 'U':
                     headPosition.Y += 1;
-                    for (int i = 0; i < tailPositions.Count; i++)
-                    {
-                        var tailPosition = tailPositions[i];
-                        var previousKnotPosition = i == 0
-                            ? headPosition
-                            : tailPositions[i - 1];
-                        if (TailNeedsToCatchUp(previousKnotPosition, tailPosition, a => a.Y))
-                        {
-                            tailPosition.Y += 1;
-                            AlignTailX(previousKnotPosition, ref tailPosition);
-                            tailPositions[i] = tailPosition;
-                        }
-                        else if (TailNeedsToCatchUp(previousKnotPosition, tailPosition, a => a.X))
-                        {
-                            tailPosition.X += (tailPosition.X < previousKnotPosition.X ? 1 : -1);
-                            tailPosition.Y += 1;
-                            tailPositions[i] = tailPosition;
-                        }
-                        else
-                        {
-                            break;
-                        }
-                    }
-
                     break;
                 case 'D':
                     headPosition.Y -= 1;
-                    for (int i = 0; i < tailPositions.Count; i++)
-                    {
-                        var tailPosition = tailPositions[i];
-                        var previousKnotPosition = i == 0
-                            ? headPosition
-                            : tailPositions[i - 1];
-                        if (TailNeedsToCatchUp(previousKnotPosition, tailPosition, a => a.Y))
-                        {
-                            tailPosition.Y -= 1;
-                            AlignTailX(previousKnotPosition, ref tailPosition);
-                            tailPositions[i] = tailPosition;
-                        }
-                        else if (TailNeedsToCatchUp(previousKnotPosition, tailPosition, a => a.X))
-                        {
-                            tailPosition.X += (tailPosition.X < previousKnotPosition.X ? 1 : -1);
-                            tailPosition.Y -= 1;
-                            tailPositions[i] = tailPosition;
-                        }
-                        else
-                        {
-                            break;
-                        }
-                    }
-
-                    break;
-                case 'L':
-                    headPosition.X -= 1;
-                    for (int i = 0; i < tailPositions.Count; i++)
-                    {
-                        var tailPosition = tailPositions[i];
-                        var previousKnotPosition = i == 0
-                            ? headPosition
-                            : tailPositions[i - 1];
-                        if (TailNeedsToCatchUp(previousKnotPosition, tailPosition, a => a.X))
-                        {
-                            tailPosition.X -= 1;
-                            AlignTailY(previousKnotPosition, ref tailPosition);
-                            tailPositions[i] = tailPosition;
-                        }
-                        else if (TailNeedsToCatchUp(previousKnotPosition, tailPosition, a => a.Y))
-                        {
-                            tailPosition.Y += (tailPosition.Y < previousKnotPosition.Y ? 1 : -1);
-                            tailPosition.X -= 1;
-                            tailPositions[i] = tailPosition;
-                        }
-                        else
-                        {
-                            break;
-                        }
-                    }
-
                     break;
                 case 'R':
                     headPosition.X += 1;
-                    for (int i = 0; i < tailPositions.Count; i++)
-                    {
-                        var tailPosition = tailPositions[i];
-                        var previousKnotPosition = i == 0
-                            ? headPosition
-                            : tailPositions[i - 1];
-                        if (TailNeedsToCatchUp(previousKnotPosition, tailPosition, a => a.X))
-                        {
-                            tailPosition.X += 1;
-                            AlignTailY(previousKnotPosition, ref tailPosition);
-                            tailPositions[i] = tailPosition;
-                        }
-                        else if (TailNeedsToCatchUp(previousKnotPosition, tailPosition, a => a.Y))
-                        {
-                            tailPosition.Y += (tailPosition.Y < previousKnotPosition.Y ? 1 : -1);
-                            tailPosition.X += 1;
-                            tailPositions[i] = tailPosition;
-                        }
-                        else
-                        {
-                            break;
-                        }
-                    }
-
+                    break;
+                case 'L':
+                    headPosition.X -= 1;
                     break;
                 default:
                     throw new ArgumentException($"{direction} is not valid");
             }
-        }
 
-        private static bool TailNeedsToCatchUp(
-            (int X, int Y) headPosition,
-            (int X, int Y) tailPosition,
-            Func<(int X, int Y), int> axisGetter)
-            => Math.Abs(axisGetter(headPosition) - axisGetter(tailPosition)) > 1;
-
-        private static void AlignTailX((int X, int Y) headPosition, ref (int X, int Y) tailPosition)
-        {
-            if (!PositionsAreAligned(headPosition, tailPosition, a => a.X))
+            for (int i = 0; i < tailPositions.Count; i++)
             {
-                tailPosition.X = headPosition.X;
+                var tailPosition = tailPositions[i];
+                var previousKnotPosition = GetPreviousKnotPosition(i, headPosition, tailPositions);
+
+                if (!ArePositionsTouching(tailPosition, previousKnotPosition))
+                {
+                    tailPosition = MoveTailPosition(tailPosition, previousKnotPosition);
+                }
+
+                tailPositions[i] = tailPosition;
             }
+
+            return headPosition;
         }
 
-        private static void AlignTailY((int X, int Y) headPosition, ref (int X, int Y) tailPosition)
+        private static (int X, int Y) GetPreviousKnotPosition(int i, (int X, int Y) headPosition, List<(int X, int Y)> tailPositions) =>
+            i == 0
+                ? headPosition
+                : tailPositions[i - 1];
+
+        private static bool ArePositionsTouching((int X, int Y) position1, (int X, int Y) position2) =>
+            Math.Abs(position2.X - position1.X) <= 1 && Math.Abs(position2.Y - position1.Y) <= 1;
+
+        private static (int X, int Y) MoveTailPosition((int X, int Y) tailPosition, (int X, int Y) previousKnotPosition)
         {
-            if (!PositionsAreAligned(headPosition, tailPosition, a => a.Y))
+            if (previousKnotPosition.X > tailPosition.X)
             {
-                tailPosition.Y = headPosition.Y;
+                tailPosition.X += 1;
             }
+            else if (previousKnotPosition.X < tailPosition.X)
+            {
+                tailPosition.X -= 1;
+            }
+
+            if (previousKnotPosition.Y > tailPosition.Y)
+            {
+                tailPosition.Y += 1;
+            }
+            else if (previousKnotPosition.Y < tailPosition.Y)
+            {
+                tailPosition.Y -= 1;
+            }
+
+            return tailPosition;
         }
 
-        private static bool PositionsAreAligned(
-            (int X, int Y) headPosition,
-            (int X, int Y) tailPosition,
-            Func<(int X, int Y), int> axisGetter)
-            => Math.Abs(axisGetter(headPosition) - axisGetter(tailPosition)) == 0;
+        private static string GetRopeDisplay((int X, int Y) headPosition, List<(int X, int Y)> tailPositions)
+        {
+            var grid = new List<List<char>>();
+            for (int y = 50; y >= -50; y--)
+            {
+                var row = new List<char>();
+                for (int x = -50; x <= 50; x++)
+                {
+                    if (headPosition.X == x && headPosition.Y == y)
+                    {
+                        row.Add('H');
+                    }
+                    else
+                    {
+                        var tailNumber = 1;
+                        var addedTailPosition = false;
+                        foreach (var tailPosition in tailPositions)
+                        {
+                            if (tailPosition.X == x && tailPosition.Y == y)
+                            {
+                                row.Add(tailNumber.ToString()[0]);
+                                addedTailPosition = true;
+                                break;
+                            }
+
+                            tailNumber += 1;
+                        }
+
+                        if (!addedTailPosition)
+                        {
+                            row.Add('.');
+                        }
+                    }                    
+                }
+
+                grid.Add(row);
+            }
+
+            var sb = new StringBuilder();
+            foreach(var row in grid)
+            {
+                foreach (var item in row)
+                {
+                    sb.Append(item);
+                }
+
+                sb.AppendLine();
+            }
+
+            sb.AppendLine();
+
+            return sb.ToString();
+        }
     }
 }

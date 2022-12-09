@@ -143,7 +143,7 @@ while (input != "0")
             break;
         case "9b":
             {
-                var result = Day9.GetNumberOfTailPositions(GetInputDataLines(9), 9);
+                var result = Day9.GetNumberOfTailPositions(GetInputDataLines(9), 10);
                 Console.WriteLine($"Result: {result}");
             }
             break;
