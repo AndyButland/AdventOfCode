@@ -28,6 +28,8 @@ while (input != "0")
     Console.WriteLine("> '8b' - Day 8 (Treetop Tree House), Part 2");
     Console.WriteLine("> '9a' - Day 9 (Rope Bridge), Part 1");
     Console.WriteLine("> '9b' - Day 9 (Rope Bridge), Part 2");
+    Console.WriteLine("> '10a' - Day 10 (Cathode-Ray Tube), Part 1");
+    Console.WriteLine("> '10b' - Day 10 (Cathode-Ray Tube), Part 2");
     Console.WriteLine();
     Console.WriteLine();
     Console.WriteLine();
@@ -145,6 +147,19 @@ while (input != "0")
             {
                 var result = Day9.GetNumberOfTailPositions(GetInputDataLines(9), 10);
                 Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "10a":
+            {
+                var result = Day10.GetSumOfSignalStrengths(GetInputDataLines(10));
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "10b":
+            {
+                var result = Day10.GetScreenOutput(GetInputDataLines(10));
+                Console.Write(result);
+                Console.WriteLine();
             }
             break;
         default:

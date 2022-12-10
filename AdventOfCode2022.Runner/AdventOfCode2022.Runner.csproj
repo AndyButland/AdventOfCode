@@ -9,6 +9,7 @@
 
 	<ItemGroup>
 		<None Remove="InputData\Day1.txt" />
+		<None Remove="InputData\Day10.txt" />
 		<None Remove="InputData\Day2.txt" />
 		<None Remove="InputData\Day3.txt" />
 		<None Remove="InputData\Day4.txt" />
@@ -21,15 +22,16 @@
 
 	<ItemGroup>
 		<EmbeddedResource Include="InputData\Day1.txt" />
+		<EmbeddedResource Include="InputData\Day10.txt" />
 		<EmbeddedResource Include="InputData\Day2.txt" />
 		<EmbeddedResource Include="InputData\Day3.txt" />
 		<EmbeddedResource Include="InputData\Day4.txt" />
 		<EmbeddedResource Include="InputData\Day5.txt" />
 		<EmbeddedResource Include="InputData\Day6.txt" />
 		<EmbeddedResource Include="InputData\Day7.txt" />
-		<EmbeddedResource Include="InputData\Day9.txt" />
 		<EmbeddedResource Include="InputData\Day8.txt" />
-	</ItemGroup>
+		<EmbeddedResource Include="InputData\Day9.txt" />
+</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\AdventOfCode2022\AdventOfCode2022.csproj" />

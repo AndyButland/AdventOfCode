@@ -1,5 +1,4 @@
 ﻿using System.Text;
-using static AdventOfCode2022.Day9;
 
 namespace AdventOfCode2022
 {
