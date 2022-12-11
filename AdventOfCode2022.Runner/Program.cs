@@ -30,6 +30,8 @@ while (input != "0")
     Console.WriteLine("> '9b' - Day 9 (Rope Bridge), Part 2");
     Console.WriteLine("> '10a' - Day 10 (Cathode-Ray Tube), Part 1");
     Console.WriteLine("> '10b' - Day 10 (Cathode-Ray Tube), Part 2");
+    Console.WriteLine("> '11a' - Day 11 (Monkey in the Middle), Part 1");
+    Console.WriteLine("> '11b' - Day 11 (Monkey in the Middle), Part 2");
     Console.WriteLine();
     Console.WriteLine();
     Console.WriteLine();
@@ -160,6 +162,18 @@ while (input != "0")
                 var result = Day10.GetScreenOutput(GetInputDataLines(10));
                 Console.Write(result);
                 Console.WriteLine();
+            }
+            break;
+        case "11a":
+            {
+                var result = Day11.GetMonkeyBusinessLevel(GetInputDataLines(11), true, 20);
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "11b":
+            {
+                var result = Day11.GetMonkeyBusinessLevel(GetInputDataLines(11), false, 10000);
+                Console.WriteLine($"Result: {result}");
             }
             break;
         default:

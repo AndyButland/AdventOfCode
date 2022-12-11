@@ -173,8 +173,6 @@ noop";
 ######......######......######......####
 #######.......#######.......#######.....";
             result.Should().Be(expected);
-
-
         }
 
         private static string[] GetInputLines(string input) => input.Split(Environment.NewLine);
