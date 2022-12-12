@@ -162,7 +162,6 @@ namespace AdventOfCode2022
                     return currentLevel * operand;
                 default:
                     throw new ArgumentException($"{operation.Operator} could not be parsed as an operator.");
-
             }
         }
     }

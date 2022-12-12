@@ -31,9 +31,9 @@ while (input != "0")
     Console.WriteLine("> '10a' - Day 10 (Cathode-Ray Tube), Part 1");
     Console.WriteLine("> '10b' - Day 10 (Cathode-Ray Tube), Part 2");
     Console.WriteLine("> '11a' - Day 11 (Monkey in the Middle), Part 1");
-    Console.WriteLine("> '11b' - Day 11 (Monkey in the Middle), Part 2");
-    Console.WriteLine();
-    Console.WriteLine();
+    Console.WriteLine("> '11b' - ...");
+    Console.WriteLine("> '12a' - Day 12 (Hill Climbing Algorithm), Part 1");
+    Console.WriteLine("> '12b' - Day 12 (Hill Climbing Algorithm), Part 2");
     Console.WriteLine();
     Console.WriteLine("Enter '0' to exit.");
 
@@ -173,6 +173,18 @@ while (input != "0")
         case "11b":
             {
                 var result = Day11.GetMonkeyBusinessLevel(GetInputDataLines(11), false, 10000);
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "12a":
+            {
+                var result = Day12.GetFewestStepsToDestination(GetInputDataLines(12));
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "12b":
+            {
+                var result = Day12.GetFewestStepsFromAnyLowestElevationToDestination(GetInputDataLines(12));
                 Console.WriteLine($"Result: {result}");
             }
             break;
