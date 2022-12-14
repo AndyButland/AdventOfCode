@@ -34,6 +34,10 @@ while (input != "0")
     Console.WriteLine("> '11b' - ...");
     Console.WriteLine("> '12a' - Day 12 (Hill Climbing Algorithm), Part 1");
     Console.WriteLine("> '12b' - Day 12 (Hill Climbing Algorithm), Part 2");
+    Console.WriteLine("> '13a' - Day 13 (Distress Signal), Part 1");
+    Console.WriteLine("> '13b' - ...");
+    Console.WriteLine("> '14a' - Day 14 (Regolith Reservoir), Part 1");
+    Console.WriteLine("> '14b' - Day 14 (Regolith Reservoir), Part 2");
     Console.WriteLine();
     Console.WriteLine("Enter '0' to exit.");
 
@@ -188,12 +192,31 @@ while (input != "0")
                 Console.WriteLine($"Result: {result}");
             }
             break;
+        case "13a":
+            {
+                var result = Day13.GetSumOfOrderedPairIndices(GetInputDataLines(13));
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "14a":
+            {
+                var result = Day14.GetNumberOfSandUnitsWithNoFloor(GetInputDataLines(14));
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "14b":
+            {
+                var result = Day14.GetNumberOfSandUnitsWithFloor(GetInputDataLines(14));
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
         default:
             Console.WriteLine($"Unrecognised input.");
             break;
     }
 
     Console.WriteLine();
+    Console.ReadLine();
 }
 
 static string GetInputData(int day)
