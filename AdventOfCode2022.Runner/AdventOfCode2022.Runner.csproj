@@ -14,6 +14,8 @@
 		<None Remove="InputData\Day12.txt" />
 		<None Remove="InputData\Day13.txt" />
 		<None Remove="InputData\Day14.txt" />
+		<None Remove="InputData\Day15.txt" />
+		<None Remove="InputData\Day16.txt" />
 		<None Remove="InputData\Day2.txt" />
 		<None Remove="InputData\Day3.txt" />
 		<None Remove="InputData\Day4.txt" />
@@ -27,6 +29,8 @@
 	<ItemGroup>
 		<EmbeddedResource Include="InputData\Day1.txt" />
 		<EmbeddedResource Include="InputData\Day10.txt" />
+		<EmbeddedResource Include="InputData\Day16.txt" />
+		<EmbeddedResource Include="InputData\Day15.txt" />
 		<EmbeddedResource Include="InputData\Day14.txt" />
 		<EmbeddedResource Include="InputData\Day13.txt" />
 		<EmbeddedResource Include="InputData\Day12.txt" />

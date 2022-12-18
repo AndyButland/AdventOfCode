@@ -1,11 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Text;
+﻿using System.Text;
 
 namespace AdventOfCode2022
 {
     public static class Day14
     {
-        public record Point
+        public class Point
         {
             public int X { get; set; }
 

@@ -38,6 +38,8 @@ while (input != "0")
     Console.WriteLine("> '13b' - ...");
     Console.WriteLine("> '14a' - Day 14 (Regolith Reservoir), Part 1");
     Console.WriteLine("> '14b' - Day 14 (Regolith Reservoir), Part 2");
+    Console.WriteLine("> '15a' - Day 15 (Beacon Exclusion Zone), Part 1");
+    Console.WriteLine("> '15b' - Day 15 (Beacon Exclusion Zone), Part 2");
     Console.WriteLine();
     Console.WriteLine("Enter '0' to exit.");
 
@@ -207,6 +209,18 @@ while (input != "0")
         case "14b":
             {
                 var result = Day14.GetNumberOfSandUnitsWithFloor(GetInputDataLines(14));
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "15a":
+            {
+                var result = Day15.GetNumberOfPositionsThatCannotContainABeacon(GetInputDataLines(15), 2000000);
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "15b":
+            {
+                var result = Day15.GetTuningFrequencyOfBeacon(GetInputDataLines(15), 4000000);
                 Console.WriteLine($"Result: {result}");
             }
             break;
