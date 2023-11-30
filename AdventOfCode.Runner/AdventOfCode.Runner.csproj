@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="InputData\2022\Day1.txt" />
+		<None Remove="InputData\2022\Day10.txt" />
+		<None Remove="InputData\2022\Day11.txt" />
+		<None Remove="InputData\2022\Day12.txt" />
+		<None Remove="InputData\2022\Day13.txt" />
+		<None Remove="InputData\2022\Day14.txt" />
+		<None Remove="InputData\2022\Day15.txt" />
+		<None Remove="InputData\2022\Day16.txt" />
+		<None Remove="InputData\2022\Day2.txt" />
+		<None Remove="InputData\2022\Day3.txt" />
+		<None Remove="InputData\2022\Day4.txt" />
+		<None Remove="InputData\2022\Day5.txt" />
+		<None Remove="InputData\2022\Day6.txt" />
+		<None Remove="InputData\2022\Day7.txt" />
+		<None Remove="InputData\2022\Day8.txt" />
+		<None Remove="InputData\2022\Day9.txt" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="InputData\2022\Day1.txt" />
+		<EmbeddedResource Include="InputData\2022\Day10.txt" />
+		<EmbeddedResource Include="InputData\2022\Day16.txt" />
+		<EmbeddedResource Include="InputData\2022\Day15.txt" />
+		<EmbeddedResource Include="InputData\2022\Day14.txt" />
+		<EmbeddedResource Include="InputData\2022\Day13.txt" />
+		<EmbeddedResource Include="InputData\2022\Day12.txt" />
+		<EmbeddedResource Include="InputData\2022\Day11.txt" />
+		<EmbeddedResource Include="InputData\2022\Day2.txt" />
+		<EmbeddedResource Include="InputData\2022\Day3.txt" />
+		<EmbeddedResource Include="InputData\2022\Day4.txt" />
+		<EmbeddedResource Include="InputData\2022\Day5.txt" />
+		<EmbeddedResource Include="InputData\2022\Day6.txt" />
+		<EmbeddedResource Include="InputData\2022\Day7.txt" />
+		<EmbeddedResource Include="InputData\2022\Day8.txt" />
+		<EmbeddedResource Include="InputData\2022\Day9.txt" />
+</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\AdventOfCode\AdventOfCode.csproj" />
+	</ItemGroup>
+
+</Project>
