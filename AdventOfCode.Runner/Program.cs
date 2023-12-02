@@ -10,39 +10,41 @@ while (input != "0")
 
     Console.WriteLine("Please select the exercise you would like to run:");
     Console.WriteLine();
-    Console.WriteLine("> '22-1a' - Day 1 (Calorie Counting), Part 1");
-    Console.WriteLine("> '22-1b' - Day 1 (Calorie Counting), Part 2");
-    Console.WriteLine("> '22-2a' - Day 2 (Rock Paper Scissors), Part 1");
-    Console.WriteLine("> '22-2b' - Day 2 (Rock Paper Scissors), Part 2");
-    Console.WriteLine("> '22-3a' - Day 3 (Rucksack Reorganization), Part 1");
-    Console.WriteLine("> '22-3b' - Day 3 (Rucksack Reorganization), Part 2");
-    Console.WriteLine("> '22-4a' - Day 4 (Camp Cleanup), Part 1");
-    Console.WriteLine("> '22-4b' - Day 4 (Camp Cleanup), Part 2");
-    Console.WriteLine("> '22-5a' - Day 5 (Supply Stacks), Part 1");
-    Console.WriteLine("> '22-5b' - Day 5 (Supply Stacks), Part 2");
-    Console.WriteLine("> '22-6a' - Day 6 (Tuning Trouble), Part 1");
-    Console.WriteLine("> '22-6b' - Day 6 (Tuning Trouble), Part 2");
-    Console.WriteLine("> '22-7a' - Day 7 (No Space Left On Device), Part 1");
-    Console.WriteLine("> '22-7b' - Day 7 (No Space Left On Device), Part 2");
-    Console.WriteLine("> '22-8a' - Day 8 (Treetop Tree House), Part 1");
-    Console.WriteLine("> '22-8b' - Day 8 (Treetop Tree House), Part 2");
-    Console.WriteLine("> '22-9a' - Day 9 (Rope Bridge), Part 1");
-    Console.WriteLine("> '22-9b' - Day 9 (Rope Bridge), Part 2");
-    Console.WriteLine("> '22-10a' - Day 10 (Cathode-Ray Tube), Part 1");
-    Console.WriteLine("> '22-10b' - Day 10 (Cathode-Ray Tube), Part 2");
-    Console.WriteLine("> '22-11a' - Day 11 (Monkey in the Middle), Part 1");
+    Console.WriteLine("> '22-1a' - 2022 Day 1 (Calorie Counting), Part 1");
+    Console.WriteLine("> '22-1b' - 2022 Day 1 (Calorie Counting), Part 2");
+    Console.WriteLine("> '22-2a' - 2022 Day 2 (Rock Paper Scissors), Part 1");
+    Console.WriteLine("> '22-2b' - 2022 Day 2 (Rock Paper Scissors), Part 2");
+    Console.WriteLine("> '22-3a' - 2022 Day 3 (Rucksack Reorganization), Part 1");
+    Console.WriteLine("> '22-3b' - 2022 Day 3 (Rucksack Reorganization), Part 2");
+    Console.WriteLine("> '22-4a' - 2022 Day 4 (Camp Cleanup), Part 1");
+    Console.WriteLine("> '22-4b' - 2022 Day 4 (Camp Cleanup), Part 2");
+    Console.WriteLine("> '22-5a' - 2022 Day 5 (Supply Stacks), Part 1");
+    Console.WriteLine("> '22-5b' - 2022 Day 5 (Supply Stacks), Part 2");
+    Console.WriteLine("> '22-6a' - 2022 Day 6 (Tuning Trouble), Part 1");
+    Console.WriteLine("> '22-6b' - 2022 Day 6 (Tuning Trouble), Part 2");
+    Console.WriteLine("> '22-7a' - 2022 Day 7 (No Space Left On Device), Part 1");
+    Console.WriteLine("> '22-7b' - 2022 Day 7 (No Space Left On Device), Part 2");
+    Console.WriteLine("> '22-8a' - 2022 Day 8 (Treetop Tree House), Part 1");
+    Console.WriteLine("> '22-8b' - 2022 Day 8 (Treetop Tree House), Part 2");
+    Console.WriteLine("> '22-9a' - 2022 Day 9 (Rope Bridge), Part 1");
+    Console.WriteLine("> '22-9b' - 2022 Day 9 (Rope Bridge), Part 2");
+    Console.WriteLine("> '22-10a' - 2022 Day 10 (Cathode-Ray Tube), Part 1");
+    Console.WriteLine("> '22-10b' - 2022 Day 10 (Cathode-Ray Tube), Part 2");
+    Console.WriteLine("> '22-11a' - 2022 Day 11 (Monkey in the Middle), Part 1");
     Console.WriteLine("> '22-11b' - ...");
-    Console.WriteLine("> '22-12a' - Day 12 (Hill Climbing Algorithm), Part 1");
-    Console.WriteLine("> '22-12b' - Day 12 (Hill Climbing Algorithm), Part 2");
-    Console.WriteLine("> '22-13a' - Day 13 (Distress Signal), Part 1");
+    Console.WriteLine("> '22-12a' - 2022 Day 12 (Hill Climbing Algorithm), Part 1");
+    Console.WriteLine("> '22-12b' - 2022 Day 12 (Hill Climbing Algorithm), Part 2");
+    Console.WriteLine("> '22-13a' - 2022 Day 13 (Distress Signal), Part 1");
     Console.WriteLine("> '22-13b' - ...");
-    Console.WriteLine("> '22-14a' - Day 14 (Regolith Reservoir), Part 1");
-    Console.WriteLine("> '22-14b' - Day 14 (Regolith Reservoir), Part 2");
-    Console.WriteLine("> '22-15a' - Day 15 (Beacon Exclusion Zone), Part 1");
-    Console.WriteLine("> '22-15b' - Day 15 (Beacon Exclusion Zone), Part 2");
+    Console.WriteLine("> '22-14a' - 2022 Day 14 (Regolith Reservoir), Part 1");
+    Console.WriteLine("> '22-14b' - 2022 Day 14 (Regolith Reservoir), Part 2");
+    Console.WriteLine("> '22-15a' - 2022 Day 15 (Beacon Exclusion Zone), Part 1");
+    Console.WriteLine("> '22-15b' - 2022 Day 15 (Beacon Exclusion Zone), Part 2");
     Console.WriteLine();
-    Console.WriteLine("> '23-1a' - Day 1 (Trebuchet), Part 1");
-    Console.WriteLine("> '23-1b' - Day 1 (Trebuchet), Part 2");
+    Console.WriteLine("> '23-1a' - 2023 Day 1 (Trebuchet), Part 1");
+    Console.WriteLine("> '23-1b' - 2023 Day 1 (Trebuchet), Part 2");
+    Console.WriteLine("> '23-2a' - 2023 Day 2 (Cube Conundrum), Part 1");
+    Console.WriteLine("> '23-2b' - 2023 Day 2 (Cube Conundrum), Part 2");
     Console.WriteLine();
     Console.WriteLine("Enter '0' to exit.");
 
@@ -237,6 +239,19 @@ while (input != "0")
         case "23-1b":
             {
                 var result = AdventOfCode.Year2023.Day1.GetSumOfCalibrationValues(GetInputDataLines(2023, 1));
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "23-2a":
+            {
+                var result = AdventOfCode.Year2023.Day2.GetSumOfGameIdsPossibleWithCubes(GetInputDataLines(2023, 2), 12, 13, 14);
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+
+        case "23-2b":
+            {
+                var result = AdventOfCode.Year2023.Day2.GetPowerOfMinimumNumberOfCubes(GetInputDataLines(2023, 2));
                 Console.WriteLine($"Result: {result}");
             }
             break;
