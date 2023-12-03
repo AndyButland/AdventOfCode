@@ -9,7 +9,7 @@ Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red
 Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green";
 
     [Test]
-    public void GetSumOfGameIdsPossibleWithCubes_ReturnsCorrectResultForTestInput1()
+    public void GetSumOfGameIdsPossibleWithCubes_ReturnsCorrectResultForTestInput()
     {
         string[] inputLines = GetInputLines();
 
@@ -18,7 +18,7 @@ Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green";
     }
 
     [Test]
-    public void GetPowerOfMinumumNumberOfCubes_ReturnsCorrectResultForTestInput1()
+    public void GetPowerOfMinumumNumberOfCubes_ReturnsCorrectResultForTestInput()
     {
         string[] inputLines = GetInputLines();
 
