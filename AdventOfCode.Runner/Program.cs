@@ -47,6 +47,8 @@ while (input != "0")
     Console.WriteLine("> '23-2b' - 2023 Day 2 (Cube Conundrum), Part 2");
     Console.WriteLine("> '23-3a' - 2023 Day 3 (Gear Ratios), Part 1");
     Console.WriteLine("> '23-3b' - 2023 Day 3 (Gear Ratios), Part 1");
+    Console.WriteLine("> '23-4a' - 2023 Day 4 (Scratchcards), Part 1");
+    Console.WriteLine("> '23-4b' - 2023 Day 4 (Scratchcards), Part 2");
     Console.WriteLine();
     Console.WriteLine("Enter '0' to exit.");
 
@@ -265,6 +267,18 @@ while (input != "0")
         case "23-3b":
             {
                 var result = AdventOfCode.Year2023.Day3.GetSumOfGearRatios(GetInputDataLines(2023, 3));
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "23-4a":
+            {
+                var result = AdventOfCode.Year2023.Day4.GetSumOfPoints(GetInputDataLines(2023, 4));
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "23-4b":
+            {
+                var result = AdventOfCode.Year2023.Day4.GetNumberOfScratchcards(GetInputDataLines(2023, 4));
                 Console.WriteLine($"Result: {result}");
             }
             break;

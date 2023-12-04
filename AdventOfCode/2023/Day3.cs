@@ -9,7 +9,7 @@ public static class Day3
 
     public static int GetSumOfPartNumbers(string[] inputLines)
     {
-        var data = GetData(in inputLines);
+        var data = GetData(inputLines);
 
         var partNumbers = GetPartNumbers(data);
 
