@@ -49,6 +49,7 @@ while (input != "0")
     Console.WriteLine("> '23-3b' - 2023 Day 3 (Gear Ratios), Part 1");
     Console.WriteLine("> '23-4a' - 2023 Day 4 (Scratchcards), Part 1");
     Console.WriteLine("> '23-4b' - 2023 Day 4 (Scratchcards), Part 2");
+    Console.WriteLine("> '23-5a' - 2023 Day 5 (If You Give A Seed A Fertilizer), Part 1");
     Console.WriteLine();
     Console.WriteLine("Enter '0' to exit.");
 
@@ -279,6 +280,12 @@ while (input != "0")
         case "23-4b":
             {
                 var result = AdventOfCode.Year2023.Day4.GetNumberOfScratchcards(GetInputDataLines(2023, 4));
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "23-5a":
+            {
+                var result = AdventOfCode.Year2023.Day5.GetLowestLocationNumber(GetInputDataLines(2023, 5));
                 Console.WriteLine($"Result: {result}");
             }
             break;
