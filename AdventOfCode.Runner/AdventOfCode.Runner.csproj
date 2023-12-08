@@ -29,6 +29,9 @@
 		<None Remove="InputData\Year2023\Day3.txt" />
 		<None Remove="InputData\Year2023\Day4.txt" />
 		<None Remove="InputData\Year2023\Day5.txt" />
+		<None Remove="InputData\Year2023\Day6.txt" />
+		<None Remove="InputData\Year2023\Day7.txt" />
+		<None Remove="InputData\Year2023\Day8.txt" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -48,6 +51,9 @@
 		<EmbeddedResource Include="InputData\Year2022\Day7.txt" />
 		<EmbeddedResource Include="InputData\Year2022\Day8.txt" />
 		<EmbeddedResource Include="InputData\Year2022\Day9.txt" />
+		<EmbeddedResource Include="InputData\Year2023\Day8.txt" />
+		<EmbeddedResource Include="InputData\Year2023\Day7.txt" />
+		<EmbeddedResource Include="InputData\Year2023\Day6.txt" />
 		<EmbeddedResource Include="InputData\Year2023\Day5.txt" />
 		<EmbeddedResource Include="InputData\Year2023\Day4.txt" />
 		<EmbeddedResource Include="InputData\Year2023\Day3.txt" />

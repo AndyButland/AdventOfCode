@@ -50,6 +50,13 @@ while (input != "0")
     Console.WriteLine("> '23-4a' - 2023 Day 4 (Scratchcards), Part 1");
     Console.WriteLine("> '23-4b' - 2023 Day 4 (Scratchcards), Part 2");
     Console.WriteLine("> '23-5a' - 2023 Day 5 (If You Give A Seed A Fertilizer), Part 1");
+    Console.WriteLine("> '23-5b' - ...");
+    Console.WriteLine("> '23-6a' - 2023 Day 6 (Wait For It), Part 1");
+    Console.WriteLine("> '23-6b' - 2023 Day 6 (Wait For It), Part 2");
+    Console.WriteLine("> '23-7a' - 2023 Day 7 (Camel Cards), Part 1");
+    Console.WriteLine("> '23-7b' - ...");
+    Console.WriteLine("> '23-8a' - 2023 Day 8 (Haunted Wasteland), Part 1");
+    Console.WriteLine("> '23-8b' - ...");
     Console.WriteLine();
     Console.WriteLine("Enter '0' to exit.");
 
@@ -286,6 +293,30 @@ while (input != "0")
         case "23-5a":
             {
                 var result = AdventOfCode.Year2023.Day5.GetLowestLocationNumber(GetInputDataLines(2023, 5));
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "23-6a":
+            {
+                var result = AdventOfCode.Year2023.Day6.GetProductOfNumberOfWaysToWin(GetInputDataLines(2023, 6));
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "23-6b":
+            {
+                var result = AdventOfCode.Year2023.Day6.GetProductOfNumberOfWaysToWin(GetInputDataLines(2023, 6), false);
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "23-7a":
+            {
+                var result = AdventOfCode.Year2023.Day7.GetWinnings(GetInputDataLines(2023, 7));
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "23-8a":
+            {
+                var result = AdventOfCode.Year2023.Day8.GetNumberOfSteps(GetInputDataLines(2023, 8));
                 Console.WriteLine($"Result: {result}");
             }
             break;
