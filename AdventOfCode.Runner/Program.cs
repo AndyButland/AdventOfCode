@@ -1,6 +1,5 @@
 ﻿using System.Reflection;
 
-
 Console.WriteLine("Advent Of Code Runner");
 Console.WriteLine("---------------------");
 
@@ -57,6 +56,9 @@ while (input != "0")
     Console.WriteLine("> '23-7b' - ...");
     Console.WriteLine("> '23-8a' - 2023 Day 8 (Haunted Wasteland), Part 1");
     Console.WriteLine("> '23-8b' - ...");
+    Console.WriteLine();
+    Console.WriteLine("> '25-1a' - 2025 Day 1 (Secret Entrance), Part 1");
+    Console.WriteLine("> '25-1b' - 2025 Day 1 (Secret Entrance), Part 2");
     Console.WriteLine();
     Console.WriteLine("Enter '0' to exit.");
 
@@ -317,6 +319,19 @@ while (input != "0")
         case "23-8a":
             {
                 var result = AdventOfCode.Year2023.Day8.GetNumberOfSteps(GetInputDataLines(2023, 8));
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+
+        case "25-1a":
+            {
+                var result = AdventOfCode.Year2025.Day1.GetNumberOfTimesStoppingOnZero(GetInputDataLines(2025, 1));
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "25-1b":
+            {
+                var result = AdventOfCode.Year2025.Day1.GetNumberOfTimesPassingZero(GetInputDataLines(2025, 1));
                 Console.WriteLine($"Result: {result}");
             }
             break;
