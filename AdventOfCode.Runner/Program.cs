@@ -59,6 +59,8 @@ while (input != "0")
     Console.WriteLine();
     Console.WriteLine("> '25-1a' - 2025 Day 1 (Secret Entrance), Part 1");
     Console.WriteLine("> '25-1b' - 2025 Day 1 (Secret Entrance), Part 2");
+    Console.WriteLine("> '25-2a' - 2025 Day 2 (Gift Shop), Part 1");
+    Console.WriteLine("> '25-2b' - 2025 Day 2 (Gift Shop), Part 2");
     Console.WriteLine();
     Console.WriteLine("Enter '0' to exit.");
 
@@ -332,6 +334,18 @@ while (input != "0")
         case "25-1b":
             {
                 var result = AdventOfCode.Year2025.Day1.GetNumberOfTimesPassingZero(GetInputDataLines(2025, 1));
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "25-2a":
+            {
+                var result = AdventOfCode.Year2025.Day2.SumInvalidIdsPart1(GetInputData(2025, 2));
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "25-2b":
+            {
+                var result = AdventOfCode.Year2025.Day2.SumInvalidIdsPart2(GetInputData(2025, 2));
                 Console.WriteLine($"Result: {result}");
             }
             break;
