@@ -40,6 +40,31 @@ public static class Day2
         return total;
     }
 
+    private static List<IdRange> ParseIdRanges(string inputData) =>
+        inputData
+            .Split(',', StringSplitOptions.RemoveEmptyEntries)
+            .Select(part =>
+            {
+                var trimmed = part.Trim();
+                var dashIndex = trimmed.IndexOf('-');
+                var start = long.Parse(trimmed[..dashIndex]);
+                var end = long.Parse(trimmed[(dashIndex + 1)..]);
+                return new IdRange(start, end);
+            })
+            .ToList();
+
+    private static bool IsRepeatedSequence(long id)
+    {
+        var str = id.ToString();
+        if (str.Length % 2 != 0)
+        {
+            return false;
+        }
+
+        var half = str.Length / 2;
+        return str[..half] == str[half..];
+    }
+
     private static bool IsRepeatedSequenceAtLeastTwice(long id)
     {
         var str = id.ToString();
@@ -71,33 +96,6 @@ public static class Day2
         }
 
         return false;
-    }
-
-    private static bool IsRepeatedSequence(long id)
-    {
-        var str = id.ToString();
-        if (str.Length % 2 != 0)
-        {
-            return false;
-        }
-
-        var half = str.Length / 2;
-        return str[..half] == str[half..];
-    }
-
-    private static List<IdRange> ParseIdRanges(string inputData)
-    {
-        return inputData
-            .Split(',', StringSplitOptions.RemoveEmptyEntries)
-            .Select(part =>
-            {
-                var trimmed = part.Trim();
-                var dashIndex = trimmed.IndexOf('-');
-                var start = long.Parse(trimmed[..dashIndex]);
-                var end = long.Parse(trimmed[(dashIndex + 1)..]);
-                return new IdRange(start, end);
-            })
-            .ToList();
     }
 
     public record IdRange(long Start, long End);
