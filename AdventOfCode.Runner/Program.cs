@@ -61,6 +61,8 @@ while (input != "0")
     Console.WriteLine("> '25-1b' - 2025 Day 1 (Secret Entrance), Part 2");
     Console.WriteLine("> '25-2a' - 2025 Day 2 (Gift Shop), Part 1");
     Console.WriteLine("> '25-2b' - 2025 Day 2 (Gift Shop), Part 2");
+    Console.WriteLine("> '25-3a' - 2025 Day 3 (Lobby), Part 1");
+    Console.WriteLine("> '25-3b' - 2025 Day 3 (Lobby), Part 2");
     Console.WriteLine();
     Console.WriteLine("Enter '0' to exit.");
 
@@ -346,6 +348,18 @@ while (input != "0")
         case "25-2b":
             {
                 var result = AdventOfCode.Year2025.Day2.SumInvalidIdsPart2(GetInputData(2025, 2));
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "25-3a":
+            {
+                var result = AdventOfCode.Year2025.Day3.GetTotalOutputJoltageForTwoDigits(GetInputDataLines(2025, 3));
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "25-3b":
+            {
+                var result = AdventOfCode.Year2025.Day3.GetTotalOutputJoltageForTwelveDigits(GetInputDataLines(2025, 3));
                 Console.WriteLine($"Result: {result}");
             }
             break;
