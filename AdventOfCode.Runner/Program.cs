@@ -65,6 +65,8 @@ while (input != "0")
     Console.WriteLine("> '25-3b' - 2025 Day 3 (Lobby), Part 2");
     Console.WriteLine("> '25-4a' - 2025 Day 4 (Printing Department), Part 1");
     Console.WriteLine("> '25-4b' - 2025 Day 4 (Printing Department), Part 2");
+    Console.WriteLine("> '25-5a' - 2025 Day 5 (Cafeteria), Part 1");
+    Console.WriteLine("> '25-5b' - 2025 Day 5 (Cafeteria), Part 2");
     Console.WriteLine();
     Console.WriteLine("Enter '0' to exit.");
 
@@ -374,6 +376,18 @@ while (input != "0")
         case "25-4b":
             {
                 var result = AdventOfCode.Year2025.Day4.GetNumberOfRollsOfPaperThatCanBeRemoved(GetInputDataLines(2025, 4));
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "25-5a":
+            {
+                var result = AdventOfCode.Year2025.Day5.GetNumberOfAvailableFreshIngredients(GetInputDataLines(2025, 5));
+                Console.WriteLine($"Result: {result}");
+            }
+            break;
+        case "25-5b":
+            {
+                var result = AdventOfCode.Year2025.Day5.GetAllIngredientsConsideredFresh(GetInputDataLines(2025, 5));
                 Console.WriteLine($"Result: {result}");
             }
             break;

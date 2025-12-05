@@ -14,7 +14,7 @@ public class Day2Tests
     }
 
     [Test]
-    public void SolvePart2_ReturnsExpectedResult()
+    public void SumInvalidIdsPart2_ReturnsExpectedResult()
     {
         var result = Day2.SumInvalidIdsPart2(s_input);
         result.Should().Be(4174379265);
