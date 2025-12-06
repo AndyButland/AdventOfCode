@@ -8,75 +8,15 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<None Remove="InputData\Year2022\Day1.txt" />
-		<None Remove="InputData\Year2022\Day10.txt" />
-		<None Remove="InputData\Year2022\Day11.txt" />
-		<None Remove="InputData\Year2022\Day12.txt" />
-		<None Remove="InputData\Year2022\Day13.txt" />
-		<None Remove="InputData\Year2022\Day14.txt" />
-		<None Remove="InputData\Year2022\Day15.txt" />
-		<None Remove="InputData\Year2022\Day16.txt" />
-		<None Remove="InputData\Year2022\Day2.txt" />
-		<None Remove="InputData\Year2022\Day3.txt" />
-		<None Remove="InputData\Year2022\Day4.txt" />
-		<None Remove="InputData\Year2022\Day5.txt" />
-		<None Remove="InputData\Year2022\Day6.txt" />
-		<None Remove="InputData\Year2022\Day7.txt" />
-		<None Remove="InputData\Year2022\Day8.txt" />
-		<None Remove="InputData\Year2022\Day9.txt" />
-		<None Remove="InputData\Year2023\Day1.txt" />
-		<None Remove="InputData\Year2023\Day2.txt" />
-		<None Remove="InputData\Year2023\Day3.txt" />
-		<None Remove="InputData\Year2023\Day4.txt" />
-		<None Remove="InputData\Year2023\Day5.txt" />
-		<None Remove="InputData\Year2023\Day6.txt" />
-		<None Remove="InputData\Year2023\Day7.txt" />
-		<None Remove="InputData\Year2023\Day8.txt" />
-		<None Remove="InputData\Year2025\Day1.txt" />
-		<None Remove="InputData\Year2025\Day2.txt" />
-		<None Remove="InputData\Year2025\Day3.txt" />
-		<None Remove="InputData\Year2025\Day4.txt" />
-		<None Remove="InputData\Year2025\Day5.txt" />
+		<None Remove="InputData\Year*\Day*.txt" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<EmbeddedResource Include="InputData\Year2022\Day1.txt" />
-		<EmbeddedResource Include="InputData\Year2022\Day10.txt" />
-		<EmbeddedResource Include="InputData\Year2022\Day16.txt" />
-		<EmbeddedResource Include="InputData\Year2022\Day15.txt" />
-		<EmbeddedResource Include="InputData\Year2022\Day14.txt" />
-		<EmbeddedResource Include="InputData\Year2022\Day13.txt" />
-		<EmbeddedResource Include="InputData\Year2022\Day12.txt" />
-		<EmbeddedResource Include="InputData\Year2022\Day11.txt" />
-		<EmbeddedResource Include="InputData\Year2022\Day2.txt" />
-		<EmbeddedResource Include="InputData\Year2022\Day3.txt" />
-		<EmbeddedResource Include="InputData\Year2022\Day4.txt" />
-		<EmbeddedResource Include="InputData\Year2022\Day5.txt" />
-		<EmbeddedResource Include="InputData\Year2022\Day6.txt" />
-		<EmbeddedResource Include="InputData\Year2022\Day7.txt" />
-		<EmbeddedResource Include="InputData\Year2022\Day8.txt" />
-		<EmbeddedResource Include="InputData\Year2022\Day9.txt" />
-		<EmbeddedResource Include="InputData\Year2023\Day8.txt" />
-		<EmbeddedResource Include="InputData\Year2023\Day7.txt" />
-		<EmbeddedResource Include="InputData\Year2023\Day6.txt" />
-		<EmbeddedResource Include="InputData\Year2023\Day5.txt" />
-		<EmbeddedResource Include="InputData\Year2023\Day4.txt" />
-		<EmbeddedResource Include="InputData\Year2023\Day3.txt" />
-		<EmbeddedResource Include="InputData\Year2023\Day2.txt" />
-		<EmbeddedResource Include="InputData\Year2023\Day1.txt" />
-		<EmbeddedResource Include="InputData\Year2025\Day1.txt" />
-		<EmbeddedResource Include="InputData\Year2025\Day2.txt" />
-		<EmbeddedResource Include="InputData\Year2025\Day3.txt" />
-		<EmbeddedResource Include="InputData\Year2025\Day4.txt" />
-		<EmbeddedResource Include="InputData\Year2025\Day5.txt" />
+		<EmbeddedResource Include="InputData\Year*\Day*.txt" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\AdventOfCode\AdventOfCode.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Folder Include="InputData\Year2025\" />
 	</ItemGroup>
 
 </Project>
